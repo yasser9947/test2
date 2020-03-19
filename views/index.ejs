@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
-    <h1><%=banana %> <%= c %></h1>
+
+    <% fruits.forEach(ele =>{ %>
+    <div style="border: 1px solid black;">
+        <h3><%= ele.name%> <%= %></h3>
+        <a href="/fruit/<%=ele._id %>"> show</a>
+        <a href="/update/<%=ele._id %>"> edit</a>
+        <form action="/delet/<%=ele._id%>?_method=DELETE" method="POST">
+            <button type="submit"> Delete</button>
+        </form>
+        <%})%>
+    </div>
+    <a href="/create"> Create new fruit</a>
 </body>
+
 </html>

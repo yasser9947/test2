@@ -8,7 +8,6 @@ const FruitSchima = new mongoose.Schema({
     size : Number
 
 
-
 }, {timestamps : true})
 
 const Fruit = mongoose.model('Fruit' , FruitSchima)
